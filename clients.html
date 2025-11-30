@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Clients - POS Interface Design</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+        <a href="index.html" class="logo-link">
+            <div class="logo-placeholder">
+                POS<br>App
+            </div>
+        </a>
+        <div class="nav-btn active"><a href="index.html">Home</a></div>
+        <div class="nav-btn"><a href="clients.html">Clients</a></div>
+        <div class="nav-btn">Employee</div>
+        <div class="nav-btn">Reports</div>
+        <div class="nav-btn">Settings</div>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <main class="main-content">
+        
+        <!-- Top Header -->
+        <header>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search Bar">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+            
+            <div class="header-actions">
+                <i class="fa-solid fa-rotate header-icon" title="Refresh"></i>
+                <i class="fa-solid fa-wifi header-icon" title="Connection Status"></i>
+                <div class="datetime">
+                    <span id="date">Date</span><br>
+                    <span id="time">Time</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Clients Content Area -->
+        <div class="clients-section">
+            <div class="clients_management">
+                <div class="clients_profile_locator">
+                <div class="clients_profile">
+                    <img src="https://via.placeholder.com/600x400?text=Clients+Management+Area" alt="Clients Management Area" class="clients-placeholder">
+                    <div class="client_profile_details">
+                        <p><strong>Name:</strong> John Doe</p>
+                        <p><strong>Client ID:</strong> 001</p>
+                        <p><strong>Contact:</strong> +1234567890</p>
+                        <p><strong>Email:</strong>
+                    </div>
+                </div>
+                <div class="clients_profile">
+                    <img src="https://via.placeholder.com/600x400?text=Clients+Management+Area" alt="Clients Management Area" class="clients-placeholder">
+                    <div class="client_profile_details">
+                        <p><strong>Name:</strong> John Doe</p>
+                        <p><strong>Client ID:</strong> 001</p>
+                        <p><strong>Contact:</strong> +1234567890</p>
+                        <p><strong>Email:</strong>
+                    </div>
+                </div>
+                <div class="clients_profile">
+                    <img src="https://via.placeholder.com/600x400?text=Clients+Management+Area" alt="Clients Management Area" class="clients-placeholder">
+                    <div class="client_profile_details">
+                        <p><strong>Name:</strong> John Doe</p>
+                        <p><strong>Client ID:</strong> 001</p>
+                        <p><strong>Contact:</strong> +1234567890</p>
+                        <p><strong>Email:</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="clients_transaction_logs">
+                <table class="clients_transaction">
+                    <thead>
+                        <tr>
+                            <th>Client ID</th>
+                            <th>Name</th>
+                            <th>Credit(Ksh)</th>
+                            <th>Transaction</th>
+                            <th>Debit(Ksh)</th>
+                            <th>Balance(Ksh)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>John Doe</td>
+                            <td>2000 Ksh</td>
+                            <td>Purchase</td>
+                            <td>00 </td>
+                            <td>1500 </td>
+                </table>
+                <table class="clients_transaction">
+                    <thead>
+                        <tr>
+                            <th>Client ID</th>
+                            <th>Name</th>
+                            <th>Credit(Ksh)</th>
+                            <th>Transaction</th>
+                            <th>Debit(Ksh)</th>
+                            <th>Balance(Ksh)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>John Doe</td>
+                            <td>2000 Ksh</td>
+                            <td>Purchase</td>
+                            <td>00 </td>
+                            <td>1500 </td>
+                </table>
+                <table class="clients_transaction">
+                    <thead>
+                        <tr>
+                            <th>Client ID</th>
+                            <th>Name</th>
+                            <th>Credit(Ksh)</th>
+                            <th>Transaction</th>
+                            <th>Debit(Ksh)</th>
+                            <th>Balance(Ksh)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>John Doe</td>
+                            <td>2000 Ksh</td>
+                            <td>Purchase</td>
+                            <td>00 </td>
+                            <td>1500 </td>
+                </table>
+            </div>
+            </div>
+        </div>
+
+    </main>

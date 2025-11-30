@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS Interface Design</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+        <a href="index.html" class="logo-link">
+            <div class="logo-placeholder">
+                POS<br>App
+            </div>
+        </a>
+        <div class="nav-btn active"><a href="index.html">Home</a></div>
+        <div class="nav-btn"><a href="clients.html">Clients</a></div>
+        <div class="nav-btn">Employee</div>
+        <div class="nav-btn">Reports</div>
+        <div class="nav-btn">Settings</div>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <main class="main-content">
+        
+        <!-- Top Header -->
+        <header>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search Bar">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+            
+            <div class="header-actions">
+                <i class="fa-solid fa-rotate header-icon" title="Refresh"></i>
+                <i class="fa-solid fa-wifi header-icon" title="Connection Status"></i>
+                <div class="datetime">
+                    <span id="date">Date</span><br>
+                    <span id="time">Time</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Workspace (Catalog + Cart) -->
+        <div class="workspace">
+            
+            <!-- Middle: Item Catalog -->
+            <section class="catalog-section">
+                <div class="categories">
+                    <div class="category-item active">Burgers</div>
+                    <div class="category-item">Drinks</div>
+                    <div class="category-item">Snacks</div>
+                    <div class="category-item">Dessert</div>
+                </div>
+
+                <div class="items-grid" id="itemsGrid">
+                    <!-- Added data attributes for JS to read -->
+                    <div class="item-card" data-name="Beef Burger" data-price="12.00">
+                        <span>Beef Burger<br><small>$12.00</small></span>
+                    </div>
+                    <div class="item-card" data-name="Cheese Burger" data-price="14.00">
+                        <span>Cheese Burger<br><small>$14.00</small></span>
+                    </div>
+                    <div class="item-card" data-name="Chicken Burger" data-price="11.50">
+                        <span>Chicken Burger<br><small>$11.50</small></span>
+                    </div>
+                    <div class="item-card" data-name="Veggie Burger" data-price="10.00">
+                        <span>Veggie Burger<br><small>$10.00</small></span>
+                    </div>
+                    
+                    <div class="item-card" data-name="Cola" data-price="2.50">
+                        <span>Cola<br><small>$2.50</small></span>
+                    </div>
+                    <div class="item-card" data-name="Orange Juice" data-price="3.00">
+                        <span>Orange Juice<br><small>$3.00</small></span>
+                    </div>
+                    <div class="item-card" data-name="Lemonade" data-price="3.50">
+                        <span>Lemonade<br><small>$3.50</small></span>
+                    </div>
+                    <div class="item-card" data-name="Water" data-price="1.50">
+                        <span>Water<br><small>$1.50</small></span>
+                    </div>
+
+                    <div class="item-card" data-name="French Fries" data-price="4.00">
+                        <span>French Fries<br><small>$4.00</small></span>
+                    </div>
+                    <div class="item-card" data-name="Onion Rings" data-price="4.50">
+                        <span>Onion Rings<br><small>$4.50</small></span>
+                    </div>
+                    <div class="item-card" data-name="Nuggets" data-price="6.00">
+                        <span>Nuggets<br><small>$6.00</small></span>
+                    </div>
+                    <div class="item-card" data-name="Salad" data-price="7.00">
+                        <span>Salad<br><small>$7.00</small></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right: Cart Panel -->
+            <aside class="cart-section">
+                <button class="add-customer-btn" onclick="addCustomer()">
+                    <i class="fa-solid fa-plus"></i> Add Customer
+                </button>
+
+                <!-- Order List (Initially Empty) -->
+                <div class="order-list-container" id="orderList">
+                    <p style="text-align:center; color:#999; margin-top:20px;" id="emptyMsg">No items selected</p>
+                </div>
+
+                <!-- Summary Area -->
+                <div class="cart-options">
+                    <span>Add Note</span>
+                    <div class="options-links">
+                        <span>Discount</span>
+                        <span>Coupon</span>
+                    </div>
+                </div>
+
+                <div class="total-display">
+                    <span>Total</span>
+                    <span id="totalAmount">$0.00</span>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn-action hold-btn">
+                        <i class="fa-solid fa-circle-minus"></i> Hold Order
+                    </button>
+                    <button class="btn-action proceed-btn" onclick="alert('Order Processed!')">
+                        <i class="fa-solid fa-circle-plus"></i> Proceed
+                    </button>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- Link to External JS -->
+    <script src="index.js"></script>
+</body>
+</html>
