@@ -12,7 +12,7 @@ create table products
  stock_level INT default 0,
  created_at DATETIME default current_timestamp
  );
- desc products;
+
  CREATE TABLE customers (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL,
@@ -29,7 +29,7 @@ create table products
     created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
-DESC customers;
+
 CREATE TABLE employees (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(100) NOT NULL UNIQUE,
@@ -38,7 +38,7 @@ CREATE TABLE employees (
     created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
-DESC employees;
+
 CREATE TABLE transactions (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 
@@ -54,7 +54,7 @@ CREATE TABLE transactions (
     FOREIGN KEY (employee_id) REFERENCES employees(id)
 );
 
-DESC transactions;
+
 CREATE TABLE credit_ledger (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 
@@ -71,7 +71,7 @@ CREATE TABLE credit_ledger (
     FOREIGN KEY (transaction_id) REFERENCES transactions(id)
 );
 
-DESC credit_ledger;
+
 CREATE TABLE loyalty_history (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 
@@ -85,7 +85,7 @@ CREATE TABLE loyalty_history (
     FOREIGN KEY (customer_id) REFERENCES customers(id)
 );
 
-DESC loyalty_history;
+
 CREATE TABLE audit_log (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 
@@ -99,7 +99,7 @@ CREATE TABLE audit_log (
     FOREIGN KEY (employee_id) REFERENCES employees(id)
 );
 
-DESC audit_log;
+
 CREATE TABLE inventory_movements (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 
@@ -113,5 +113,5 @@ CREATE TABLE inventory_movements (
     FOREIGN KEY (product_id) REFERENCES products(id)
 );
 
-DESC inventory_movements;
+
 
